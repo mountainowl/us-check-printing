@@ -3,3 +3,4 @@
 .project
 .cache
 target
+/.idea/
