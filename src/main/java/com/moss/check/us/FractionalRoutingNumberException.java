@@ -1,20 +1,20 @@
 /**
  * Copyright (C) 2013, Moss Computing Inc.
  *
- * This file is part of us-check-printing-trunk.
+ * This file is part of us-bank-numbers.
  *
- * us-check-printing-trunk is free software; you can redistribute it and/or modify
+ * us-bank-numbers is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
  *
- * us-check-printing-trunk is distributed in the hope that it will be useful, but
+ * us-bank-numbers is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with us-check-printing-trunk; see the file COPYING.  If not, write to the
+ * along with us-bank-numbers; see the file COPYING.  If not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
@@ -37,17 +37,23 @@
  */
 package com.moss.check.us;
 
-import org.junit.Test;
+@SuppressWarnings("serial")
+public class FractionalRoutingNumberException extends Exception {
 
-public class TestRoutingNumber {
+	public FractionalRoutingNumberException() {
+		super();
+	}
 
-	@Test
-	public void validNumber() throws Exception {
-		new RoutingNumber("076401251");
+	public FractionalRoutingNumberException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public FractionalRoutingNumberException(String message) {
+		super(message);
+	}
+
+	public FractionalRoutingNumberException(Throwable cause) {
+		super(cause);
 	}
 	
-	@Test(expected=RoutingNumberException.class)
-	public void invalidNumber() throws Exception {
-		new RoutingNumber("076401250");
-	}
 }

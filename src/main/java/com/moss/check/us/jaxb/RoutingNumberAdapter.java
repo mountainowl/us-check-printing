@@ -1,20 +1,20 @@
 /**
  * Copyright (C) 2013, Moss Computing Inc.
  *
- * This file is part of us-check-printing-trunk.
+ * This file is part of us-bank-numbers.
  *
- * us-check-printing-trunk is free software; you can redistribute it and/or modify
+ * us-bank-numbers is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
  *
- * us-check-printing-trunk is distributed in the hope that it will be useful, but
+ * us-bank-numbers is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with us-check-printing-trunk; see the file COPYING.  If not, write to the
+ * along with us-bank-numbers; see the file COPYING.  If not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
@@ -35,19 +35,19 @@
  * obligated to do so.  If you do not wish to do so, delete this
  * exception statement from your version.
  */
-package com.moss.check.us;
+package com.moss.usbanknumbers.jaxb;
 
-import org.junit.Test;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class TestRoutingNumber {
+import com.moss.check.us.RoutingNumber;
 
-	@Test
-	public void validNumber() throws Exception {
-		new RoutingNumber("076401251");
+public class RoutingNumberAdapter extends XmlAdapter<String, RoutingNumber> {
+	@Override
+	public String marshal(RoutingNumber n) throws Exception {
+		return n==null?null:n.toString();
 	}
-	
-	@Test(expected=RoutingNumberException.class)
-	public void invalidNumber() throws Exception {
-		new RoutingNumber("076401250");
+	@Override
+	public RoutingNumber unmarshal(String text) throws Exception {
+		return text==null?null:new RoutingNumber(text);
 	}
 }

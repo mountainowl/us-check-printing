@@ -1,20 +1,20 @@
 /**
  * Copyright (C) 2013, Moss Computing Inc.
  *
- * This file is part of us-check-printing-trunk.
+ * This file is part of us-bank-numbers.
  *
- * us-check-printing-trunk is free software; you can redistribute it and/or modify
+ * us-bank-numbers is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
  * any later version.
  *
- * us-check-printing-trunk is distributed in the hope that it will be useful, but
+ * us-bank-numbers is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with us-check-printing-trunk; see the file COPYING.  If not, write to the
+ * along with us-bank-numbers; see the file COPYING.  If not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
  * 02110-1301 USA.
  *
@@ -37,17 +37,17 @@
  */
 package com.moss.check.us;
 
-import org.junit.Test;
-
-public class TestRoutingNumber {
-
-	@Test
-	public void validNumber() throws Exception {
-		new RoutingNumber("076401251");
-	}
-	
-	@Test(expected=RoutingNumberException.class)
-	public void invalidNumber() throws Exception {
-		new RoutingNumber("076401250");
+class ParseUtil {
+	static String stripLeadingZeros(String text){
+		int pos=-1;
+		for(int x=0;x<text.length();x++){
+			if(text.charAt(x)!='0')
+				break;
+			else pos=x;
+		}
+		if(pos!=-1)
+			return text.substring(pos+1);
+		else 
+			return text;
 	}
 }

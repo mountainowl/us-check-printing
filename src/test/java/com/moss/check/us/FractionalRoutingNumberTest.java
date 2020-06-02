@@ -39,11 +39,6 @@ package com.moss.check.us;
 
 import junit.framework.TestCase;
 
-import com.moss.usbanknumbers.AbaNumber;
-import com.moss.usbanknumbers.FractionalRoutingNumber;
-import com.moss.usbanknumbers.RoutingNumber;
-import com.moss.usbanknumbers.RoutingNumberException;
-
 
 public class FractionalRoutingNumberTest extends TestCase{
 	public void testRun(){

@@ -45,10 +45,6 @@ import java.math.BigDecimal;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.moss.usbanknumbers.AbaNumber;
-import com.moss.usbanknumbers.FractionalRoutingNumber;
-import com.moss.usbanknumbers.RoutingNumber;
-
 public class TestCheckModelFactory {
 	
 	private CheckModelFactory factory;

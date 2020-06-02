@@ -53,8 +53,8 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<target>1.5</target>
-					<source>1.5</source>
+					<target>1.8</target>
+					<source>1.8</source>
 					<debug>true</debug>
 				</configuration>
 			</plugin>
@@ -89,14 +89,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.moss.usbanknumbers</groupId>
-			<artifactId>us-bank-numbers</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.3</version>
+			<version>4.13</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

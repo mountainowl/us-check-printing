@@ -44,14 +44,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.moss.usbanknumbers.AccountNumber;
-import com.moss.usbanknumbers.AccountNumberException;
-import com.moss.usbanknumbers.CheckNumber;
-import com.moss.usbanknumbers.CheckNumberException;
-import com.moss.usbanknumbers.FractionalRoutingNumber;
-import com.moss.usbanknumbers.RoutingNumber;
-import com.moss.usbanknumbers.RoutingNumberException;
-
 public class CheckModelFactory {
 	
 	String drawerName;

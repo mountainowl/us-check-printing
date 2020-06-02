@@ -40,11 +40,6 @@ package com.moss.check.us;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestCase;
 
-import com.moss.usbanknumbers.AbaNumber;
-import com.moss.usbanknumbers.AbaNumberException;
-import com.moss.usbanknumbers.RoutingNumber;
-import com.moss.usbanknumbers.RoutingNumberException;
-
 
 public class AbaNumberTest extends TestCase{
 	public void testRun(){
